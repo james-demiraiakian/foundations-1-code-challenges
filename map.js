@@ -34,13 +34,14 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    let hungryArr = [];
-    arr.map(element => {
-        // console.log(element);
-        hungryArr.set('isHungry', true);
-        console.log(hungryArr);
-    });
-    return arr;
+    // const hungryArr = arr.map(pets => {
+    //     pets.isHungry = true;
+    //     return pets;
+    // });
+    // return hungryArr;
+    return arr.map(pet => ({
+        ...pet, isHungry: true
+    }));
 }
 
 /*
@@ -54,7 +55,12 @@ Output:
 ]*/
 
 export function makeShoutingArray(arr) {
-    return [];
+    const upArr = arr.map(pet => {
+        const name = pet.name;
+        pet.name = name.toUpperCase();
+        return pet;
+    });
+    return upArr;
 }
 
 
@@ -65,7 +71,10 @@ Output:
 */
 
 export function makeStringArray(arr) {
-    return [];
+    const strArray = arr.map(pets => {
+
+    });
+    return strArray;
 }
 
 /*
