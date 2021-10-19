@@ -2,13 +2,18 @@
 
 /*
 Input:
+*/
+const pets =
 [
     { name: 'spot', type: 'dog' },
     { name: 'rover', type: 'dog' },
     { name: 'jumpy', type: 'frog' },
     { name: 'einstein', type: 'cat' },
-]
-*/
+];
+
+pets.forEach(pet => {
+    
+});
 
 /*
 Output:
@@ -17,7 +22,11 @@ Output:
 */
 
 export function makeArrayOfNames(arr) {
-    return [];
+    const nameArr = [];
+    arr.forEach(element => {
+        nameArr.push(element.name);
+    });
+    return nameArr;
 }
 
 /*
@@ -27,7 +36,11 @@ Output:
 */
 
 export function makeReversedArrayOfTypes(arr) {
-    return [];
+    const revTypeArr = [];
+    arr.reverse().forEach(element => {
+        revTypeArr.push(element.type);
+    });
+    return revTypeArr;
 }
 
 /*
