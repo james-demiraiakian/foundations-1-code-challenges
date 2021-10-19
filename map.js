@@ -19,7 +19,8 @@ Output:
 */
 
 export function makeArrayOfNamesWithMap(arr) {
-    return [];
+    const names = arr.map(pet => pet.name);
+    return names;
 }
 
 /*
@@ -33,7 +34,13 @@ Output:
 ]*/
 
 export function makeArrayWithIsHungry(arr) {
-    return [];
+    let hungryArr = [];
+    arr.map(element => {
+        // console.log(element);
+        hungryArr.set('isHungry', true);
+        console.log(hungryArr);
+    });
+    return arr;
 }
 
 /*
